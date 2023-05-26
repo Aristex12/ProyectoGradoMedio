@@ -1,0 +1,276 @@
+/* Estilos para toda la pagina*/
+
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Pippons',sans-serif;
+}
+
+/* Estilos para el contenedor en donde se encuentra el contenedor*/
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+/* Estilos para toda la cabecera*/
+.cabecera{
+    background-color: black;
+    font-family: 'Pippons',sans-serif;
+    width: 100%;
+    z-index: 10000px;
+}
+
+.container::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+p{
+    float: left;
+    color: white;
+    margin-left: 0;
+   
+}
+
+nav{
+    float: right;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li{
+    float: left;
+    margin-left: 20px;
+    padding-top: 20px;
+
+    position: relative;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+nav a:hover{
+    color: #9c9c9c;
+}
+
+nav a::before{
+    content: "";
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: red;
+
+    position: absolute;
+    top: 0;
+    width: 0%;
+
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before{
+    width: 100%;
+}
+
+.nav4::before{
+    content: "";
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: red;
+}
+
+
+/* Estilos para el body*/
+body{
+	height: 100vh;
+	width: 100%;
+    background-color: rgb(65, 64, 64);
+    margin: 0;
+}
+/* Estilos para el contenedor en donde se encuentra el formulario*/
+.container2{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 150px;
+    padding-bottom: 150px;
+}
+/* Estilos para el fondo del forms*/
+.container2:after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: url("../Imagenes/rainbow-scroll.gif") no-repeat center;
+	background-size: cover;
+	filter: blur(50px);
+	z-index: -1;
+}
+/* Estilos para la caja del forms*/
+.contact-box{
+	max-width: 850px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: #fff;
+	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+}
+/* Estilos para la imagen de la izquierda*/
+.left{
+	background: url("../Imagenes/IMG_4097.JPG") no-repeat center;
+	background-size: cover;
+	height: 100%;
+}
+/* Estilos para la parte derecha de la imagen*/
+.right{
+	padding: 25px 40px;
+}
+
+h2{
+	position: relative;
+	padding: 0 0 10px;
+	margin-bottom: 10px;
+}
+
+.container2 h2:after{
+	content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: red;
+}
+
+/* Estilos para los inputs*/
+.field{
+	width: 100%;
+	border: 2px solid rgba(0, 0, 0, 0);
+	outline: none;
+	background-color: rgba(230, 230, 230, 0.6);
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	margin-bottom: 22px;
+	transition: .3s;
+}
+
+.field:hover{
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+textarea{
+	min-height: 150px;
+}
+
+.btn{
+	width: 100%;
+	padding: 0.5rem 1rem;
+	background-color: red;
+	color: #fff;
+	font-size: 1.1rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.btn:hover{
+    background-color: red;
+}
+
+.field:focus{
+    border: 2px solid rgba(30,85,250,0.47);
+    background-color: #fff;
+}
+
+@media screen and (max-width: 880px){
+	.contact-box{
+		grid-template-columns: 1fr;
+	}
+	.left{
+		height: 200px;
+	}
+}
+
+
+
+
+/* Estilos para el footer*/
+
+.piedepagina{
+    width: 100%;
+    background-color: white;
+}
+
+.piedepagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    padding: 45px 0px;
+}
+
+.box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box figure img{
+    width: 90px;
+    margin-right: 70%;
+}
+
+.box h2{
+    color: black;
+    margin-bottom: 25px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.box .proyectos{
+    color: black;
+    margin-bottom: 10px;
+    margin-left: 40%;
+    text-decoration: none;
+}
+
+.box .proyectos:hover{
+    color: aqua;
+    transition: 0.3s;
+}
+
+.red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    color: black;
+    margin-left: 12%;
+}
+
+.red-social a:hover{
+    color: aqua;
+    transition: 0.3s;
+}
